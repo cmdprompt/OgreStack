@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<OgreStack.ModName>OgreStack</OgreStack.ModName>
+	
+	<!-- Mode Options -->
+	<OgreStack.Settings.Mode.Scalar>Scalar</OgreStack.Settings.Mode.Scalar>
+	<OgreStack.Settings.Mode.Fixed>Fixed</OgreStack.Settings.Mode.Fixed>
+
+
+	<!-- Stack Settings -->
+	<OgreStack.SectionHeader.Settings>Stack Settings</OgreStack.SectionHeader.Settings>
+
+	<!-- Stack Settings: Table Headers -->
+	<OgreStack.Settings.Category>Category</OgreStack.Settings.Category>
+	<OgreStack.Settings.Mode>Mode</OgreStack.Settings.Mode>
+	<OgreStack.Settings.Mode.Desc>Fixed: Means each item that matches the category will have a stack size specified by the value.\n(Good for items that are similar and have similar base stack sizes: like cloth and leather).\n\nScalar: Means each item that matches the category will have its base game stacksize multipled by the value.\n(Good for items that are not similar or have vastly different base stack sizes: like manufactured).</OgreStack.Settings.Mode.Desc>
+	<OgreStack.Settings.Value>Value</OgreStack.Settings.Value>
+
+	<!-- Stack Settings: Category Titles / ToolTip Descriptions -->
+	<OgreStack.Settings.SmallVolumeResource.Title>Small Volume Resources</OgreStack.Settings.SmallVolumeResource.Title>
+	<OgreStack.Settings.SmallVolumeResource.Desc>Gold, Uranium ...</OgreStack.Settings.SmallVolumeResource.Desc>
+
+	<OgreStack.Settings.Resource.Title>Resources</OgreStack.Settings.Resource.Title>
+	<OgreStack.Settings.Resource.Desc>Steel, plasteel, wood, jade ...</OgreStack.Settings.Resource.Desc>
+
+	<OgreStack.Settings.RawFoodMeat.Title>Raw Meat</OgreStack.Settings.RawFoodMeat.Title>
+	<OgreStack.Settings.RawFoodMeat.Desc>Meat, milk, eggs ...</OgreStack.Settings.RawFoodMeat.Desc>
+
+	<OgreStack.Settings.RawFoodPlant.Title>Raw Veggies</OgreStack.Settings.RawFoodPlant.Title>
+	<OgreStack.Settings.RawFoodPlant.Desc>Corn, berries, rice, ...</OgreStack.Settings.RawFoodPlant.Desc>
+
+	<OgreStack.Settings.PlantMatter.Title>Raw Plants</OgreStack.Settings.PlantMatter.Title>
+	<OgreStack.Settings.PlantMatter.Desc>Hops, psychoid leaves, smokeleaf leaves ...</OgreStack.Settings.PlantMatter.Desc>
+
+	<OgreStack.Settings.Meal.Title>Meals</OgreStack.Settings.Meal.Title>
+	<OgreStack.Settings.Meal.Desc>Fine meal, lavish meal ...</OgreStack.Settings.Meal.Desc>
+
+	<OgreStack.Settings.FoodForAnimal.Title>Animal Food</OgreStack.Settings.FoodForAnimal.Title>
+	<OgreStack.Settings.FoodForAnimal.Desc>Hay, kibble ...</OgreStack.Settings.FoodForAnimal.Desc>
+
+	<OgreStack.Settings.Food.Title>Foods</OgreStack.Settings.Food.Title>
+	<OgreStack.Settings.Food.Desc>Pemmican, chocolate ...</OgreStack.Settings.Food.Desc>
+
+	<OgreStack.Settings.Item.Title>Items</OgreStack.Settings.Item.Title>
+	<OgreStack.Settings.Item.Desc>Horns, mech serums ...</OgreStack.Settings.Item.Desc>
+
+	<OgreStack.Settings.BodyPartOrImplant.Title>Body parts and Implants</OgreStack.Settings.BodyPartOrImplant.Title>
+	<OgreStack.Settings.BodyPartOrImplant.Desc>Organs, arms, bionics, implants ...</OgreStack.Settings.BodyPartOrImplant.Desc>
+
+	<OgreStack.Settings.Leather.Title>Leathers</OgreStack.Settings.Leather.Title>
+	<OgreStack.Settings.Leather.Desc>Leathers ...</OgreStack.Settings.Leather.Desc>
+
+	<OgreStack.Settings.Textile.Title>Textiles</OgreStack.Settings.Textile.Title>
+	<OgreStack.Settings.Textile.Desc>Cloths, Wool ...</OgreStack.Settings.Textile.Desc>
+
+	<OgreStack.Settings.StoneBlock.Title>Stone Blocks</OgreStack.Settings.StoneBlock.Title>
+	<OgreStack.Settings.StoneBlock.Desc>Granite, marble ...</OgreStack.Settings.StoneBlock.Desc>
+
+	<OgreStack.Settings.Manufactured.Title>Manufactured</OgreStack.Settings.Manufactured.Title>
+	<OgreStack.Settings.Manufactured.Desc>Wort, components, neutroamine, chemfuel ...</OgreStack.Settings.Manufactured.Desc>
+
+	<OgreStack.Settings.Drug.Title>Drugs</OgreStack.Settings.Drug.Title>
+	<OgreStack.Settings.Drug.Desc>Beer, ambrosia, yayo ...</OgreStack.Settings.Drug.Desc>
+
+	<OgreStack.Settings.Medicine.Title>Medicine</OgreStack.Settings.Medicine.Title>
+	<OgreStack.Settings.Medicine.Desc>Medicine, herbal, glitterworld ...</OgreStack.Settings.Medicine.Desc>
+
+	<OgreStack.Settings.MortarShell.Title>Mortar Shells</OgreStack.Settings.MortarShell.Title>
+	<OgreStack.Settings.MortarShell.Desc>High explosive, antigrain, EMP ...</OgreStack.Settings.MortarShell.Desc>
+
+	<OgreStack.Settings.Artifact.Title>Artifacts</OgreStack.Settings.Artifact.Title>
+	<OgreStack.Settings.Artifact.Desc>Psychic insanity lance, psychic animal pulser ...</OgreStack.Settings.Artifact.Desc>
+
+	<OgreStack.Settings.Other.Title>Other</OgreStack.Settings.Other.Title>
+	<OgreStack.Settings.Other.Desc>Anything else that is stackable</OgreStack.Settings.Other.Desc>
+
+
+	<!-- Manual Overrides -->
+	<OgreStack.SectionHeader.Overrides>Manual Overrides</OgreStack.SectionHeader.Overrides>
+	<OgreStack.Settings.DefName>defName</OgreStack.Settings.DefName>
+	<OgreStack.Settings.StackLimit>stackLimit</OgreStack.Settings.StackLimit>
+	<OgreStack.Settings.Overrides.Desc>Manual overrides are listed here. But they are only editable outside of the game via the Overrides.xml file. The Overrides.xml file is located here: {0}</OgreStack.Settings.Overrides.Desc>
+
+	<!-- Debug -->
+	<OgreStack.SectionHeader.Debug>Debug</OgreStack.SectionHeader.Debug>
+	<OgreStack.Settings.CSV.Title>Write Processed DefsList CSV</OgreStack.Settings.CSV.Title>
+	<OgreStack.Settings.CSV.Desc>Writes all the ThingDefs that are stackable, their original stack values, which ModFile modified them, final stackvalues, i.e. debug information.\n\nNote this only happens when stacks are modified. Not just from checking this checkbox.\n\nOutput file is named OgreStack_DefsList.csv and will be located in the RimWorld savedata location in the OgreStack folder.\n\nLocation: {0}</OgreStack.Settings.CSV.Desc>
+
+	
+	
+
+</LanguageData>
