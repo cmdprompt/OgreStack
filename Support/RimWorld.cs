@@ -1,4 +1,4 @@
-﻿using Verse;
+using Verse;
 using System.Text.RegularExpressions;
 
 namespace OgreStack.Support

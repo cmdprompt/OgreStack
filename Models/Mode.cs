@@ -1,4 +1,4 @@
-﻿
+
 namespace OgreStack
 {
 	public enum MultiplierMode
