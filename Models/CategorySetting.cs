@@ -98,6 +98,8 @@ namespace OgreStack
 								{
 									Thing remain = ThingMaker.MakeThing(t.def, stuff);
 									remain.stackCount = Math.Min(over, stackLimit);
+									remain.HitPoints = Math.Min(t.HitPoints, remain.MaxHitPoints);
+
 									if (isForbidden)
 										(remain as ThingWithComps).GetComp<RimWorld.CompForbiddable>().Forbidden = true;
 									

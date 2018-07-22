@@ -3,19 +3,31 @@
 		<name>OgreStack</name>
 		<author>Ogre</author>
 		<targetVersion>1.0.0</targetVersion>
-		<description>Stack Size Mod inspired by the popular XXL mod written by Indeed.
+		<description>Mod for customizing stack sizes. As well as the ability to target specific items.
 
-This adds more default categories for stacking as well as the ability to target specific items to increase stack size.
-- Category stack adjustments are made via scalars in the HugsLib mod setting menu.
-- Individual item stack adjustments are made via the Overrides.xml in the SaveDataFolder
+Improvements for v1.0:
+ - Stack changes now do NOT require a game reload, if a stack is modified 
+   below a set stack size the stack is split up into smaller stacks.
+   Should still save your game after every stack size adjustment; because
+   if you adjust stacks, dont save, then reload a game, you could lose items.
 
-Requirements: HugsLib
+ - Custom in game menu lets you pick between different modes ( scalar / fixed )
+  + scalar : multiplies the base count by the number specified
+  + fixed : simply sets the stack size to the number
 
-IMPORTANT: PLEASE RESTART YOUR GAME AFTER CHANGING MOD SETTINGS!
+ - Removed HugsLib dep since the hugs settings is no longer used.
+
+ - Attempted to make it more clear how to set individual overrides
+   via the Overrides.xml file.
+
+Load Order:
+ - It hopefully won't matter. The stack modification code attempts to run after
+   initial processing is complete. But if you have problems. Try moving
+   OgreStack to last place.
 
 Defaults:
 (Groups)
- - Small Volume Resources : 15000 - ( gold, uranium, ... )
+ - Small Volume Resources : x30 - ( gold, uranium, ... )
  - Resources : 1000 ( steel, wood, plasteel, ... )
  - Raw Food : 1000 ( corn, rice, ... )
  - Raw Meat : 1000 ( meat, eggs, ... )
@@ -25,73 +37,25 @@ Defaults:
  - Foods : 1000 ( pemmican, chocolate, ... )
  - Items : 20 ( horns, mech serums, ... )
  - Body Parts &amp; Implants : 5 ( arms, bionics, ... )
- - Textiles : 1000 ( leather, cloth, wool, ... )
+ - Textiles : 1000 ( cloth, wool, ... )
+ - Leather : 1000 ( leather )
  - Stone Blocks : 2500 ( granite, marble, ... )
  - Manufactured : x10.0 ( components, wort, chemfuel, ... )
- - Medicine : 200 ( herbal, glitter, ... )
+ - Medicine : 75 ( herbal, glitter, ... )
  - Drugs : 4000 ( smokeleaf joints, yayo, ... )
  - Mortar Shells : 25 ( antigrain, high explosive, ... )
- - Artifacts : 20 ( psychic lances, ... )
+ - Artifacts : 10 ( psychic lances, ... )
  - Other Stackables : x10 ( other items that stack but do not use vanilla game categories )
 
 (Individual)
  - Silver : 25000
+ - Jade : 15000
  - Beer : 500
  - Wort : 2000
- - Jade : 15000
- - ScytherBlade : 20
+ - AIPersonaCore : 1
+ - TechprofSubpersonaCore : 1
 
-Some of the base stack values are ignored on items and set to a fixed value in order to better match other items in their category:
- - Resources : Base 75
- - Raw Food Meat : Base 75
- - Raw Food Plant : Base 75
- - Plant Matter : Base 75
- - Meals : Base 10
- - Animal Food : Base 200
- - Foods : Base 75
- - Items: 10
- - Leather : Base 75
- - Textiles : Base 75
- - Drugs: Base 400
- - Artifact : Base 1
- 
- 
-Update December 5, 2017
- - Removed Silver from category's, it's not a category and is 
-   targeted by default in Overrides.xml
- - Renamed category RareResources to SmallVolumeResources
- - Split Meat and Raw Plants into their own categories
- - Split Cloth and Leather into their own categories
- - Added Category Artifacts
- 
- - Set stack sizes before multipliers:
-  - PlantMatter (75)
-  - Item (10)
-  - Drug (400)
-  - Artifact (1)
- 
- - Added way to alter stack sizes for individual items! and/or 
-    ban entire categories from OgreStack altering their stacklimit
-  - Overrides.xml 
-    - Silver (25000) // currency
-    - Jade (15000)   // stack as high as default gold
-    - Beer (500)     // default stack limits make it hard to brew lots of beer
-    - Wort (2000)    // stack as high as default hops
-    
-    // these take up too much valuable stockpile space 
-    // waiting around for a trader that can buy them
-    - ScytherBlade (20) 
- 
- - Added tweeks for specific mods:
-  - Genetic Rim
-  - Tiberium Rim
-  - Cupro's Drinks
-  - Vegetable Garden
-  - Medieval Times
-
- - Added option in mod menu to output a CSV of all
-   defs that OgreStack thinks are stackable items.
-   This gives people wanting to set stack rules for
-   individual items the ability to view DefNames and
-   Categories for quick entry into Overrides.xml</description>
+GitHub: https://github.com/cmdprompt/OgreStack
+B18: https://steamcommunity.com/sharedfiles/filedetails/?id=1212016985
+</description>
 </ModMetaData>
