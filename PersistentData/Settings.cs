@@ -98,7 +98,7 @@ namespace OgreStack.PersistentData
 						string label = cat + "_";
 
 						Scribe_Values.Look<MultiplierMode>(ref setting.Mode, label + "Mode");
-						Scribe_Values.Look<float>(ref setting.Value, label + "Value");
+						Scribe_Values.Look<string>(ref setting.Buffer, label + "Value");
 
 						//Verse.Log.Message(string.Format("[Save Write] {0}:{1}:{2}",
 						//	cat.ToString(),
@@ -139,33 +139,26 @@ namespace OgreStack.PersistentData
 						string label = c.ToString() + "_";
 
 						MultiplierMode mode = MultiplierMode.Fixed;
-						float value = 0; // OgreStackMod._DEFAULTS[c].Value;
+						string value = "0"; // OgreStackMod._DEFAULTS[c].Value;
 						Scribe_Values.Look<MultiplierMode>(ref mode, label + "Mode", MultiplierMode.Fixed);
-						Scribe_Values.Look<float>(ref value, label + "Value");
-						if (value > 0)
+						Scribe_Values.Look<string>(ref value, label + "Value");
+						//if (string.Compare("0", value, true) != 0)
+						if (!string.IsNullOrEmpty(value))
 						{
-							//Verse.Log.Message(string.Format("[Load Found] {0}:{1}:{2}",
-							//	c.ToString(),
-							//	mode,
-							//	value.ToString()
-							//));
-
 							this.Values[c] = new CategorySetting(
 								mode: mode,
-								value: value
+								buffer: value
 							);
+							this.Values[c].ParseBuffer();
 						}
 						else
 						{
 							this.Values[c] = new CategorySetting(
 								mode: OgreStackMod._DEFAULTS[c].Mode,
-								value: OgreStackMod._DEFAULTS[c].Value
+								buffer: OgreStackMod._DEFAULTS[c].Value.ToString()
 							);
-
-							//Verse.Log.Message(string.Format("[Load Missing] {0}",
-							//	c.ToString()
-							//));
 						}
+						
 					}
 
 					Scribe_Values.Look<bool>(ref this.IsDebug, "IsDebugCSV", false);
