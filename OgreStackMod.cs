@@ -13,8 +13,6 @@ namespace OgreStack
 		public OgreStackSettings settings;
 		private Dictionary<string, List<Thing>> _activeThings = null;
 
-		//private Vector2 scrollPosition = new Vector2(0, 0);
-
 		//=====================================================================================================\\
 
 		public OgreStackMod(ModContentPack content) : base(content)
@@ -22,7 +20,8 @@ namespace OgreStack
 			//Verse.Log.Message("No Impact No Idea");
 			this.settings = base.GetSettings<OgreStackSettings>();
 
-			this.settings.ReModify = () => {
+			this.settings.ReModify = () =>
+			{
 				Verse.Log.Message("[OgreStack]: Remodify From Settings Change");
 
 				_activeThings = new Dictionary<string, List<Thing>>();
@@ -70,9 +69,9 @@ namespace OgreStack
 		public override void DoSettingsWindowContents(Rect rect)
 		{
 			Color headerColor = new Color(
-				r: 1.0f, 
-				g: 0.9725490f, 
-				b: 0.239215686f, 
+				r: 1.0f,
+				g: 0.9725490f,
+				b: 0.239215686f,
 				a: 1.0f
 			);
 			GUIStyleState headerState = new GUIStyleState() {
@@ -88,15 +87,16 @@ namespace OgreStack
 			hdStyle.fontStyle = FontStyle.Bold;
 			hdStyle.normal = new GUIStyleState() {
 				textColor = new Color(
-					r: 1.0f, 
-					g: 0.74117647f, 
-					b: 0.2392156862f, 
+					r: 1.0f,
+					g: 0.74117647f,
+					b: 0.2392156862f,
 					a: 1.0f
 				)
 			};
 			hdStyle.padding = new RectOffset(4, 0, 0, 0);
 
 			Listing_Standard listing = new Listing_Standard(GameFont.Small);
+			Listing_Standard listingPresets = new Listing_Standard(GameFont.Small);
 			List<KeyValuePair<string, int>> overrides = new IndividualOverrides().ViewInternalOverrides();
 
 			// 3 headers
@@ -113,26 +113,89 @@ namespace OgreStack
 				+ 40; // for fudge making
 
 			Rect mainRect = new Rect(
-				x: 0, 
-				y: 0, 
-				width: rect.width - 40, //-40 for scrollbar
+				x: 0,
+				y: 0,
+				width: rect.width - 25, //25 for scrollbar
 				height: height
 			);
 
 			Widgets.BeginScrollView(rect, ref this.settings.ScrollPosition, mainRect, true);
-			
-			
-			listing.ColumnWidth = mainRect.width;
-			listing.Begin(mainRect);
-			//listing.Gap(gapHeight: 12);
 
-			Rect section = listing.GetRect(Verse.Text.LineHeight + 2);
+			Rect mainLeft = mainRect.LeftPart(0.78f);
+			Rect mainRight = mainRect.RightPart(0.20f);
+
+			
+			// PRESETS
+			listingPresets.ColumnWidth = mainRight.width;
+			listingPresets.Begin(mainRight);
+			Rect section = listingPresets.GetRect(Verse.Text.LineHeight + 2);
 			TextAnchor anchor = Text.Anchor;
+			Text.Anchor = TextAnchor.UpperLeft;
+			GUI.Box(section, Translator.Translate("OgreStack.SectionHeader.Presets"), headerStyle);
+			Text.Anchor = anchor;
+
+			Color color = GUI.color;
+			GUI.color = Color.grey;
+			Widgets.DrawLineHorizontal(section.x, section.y + section.height - 1, section.width);
+			Widgets.DrawLineHorizontal(section.x, section.y + section.height - 2, section.width);
+			GUI.color = color;
+
+			// Ogre
+			section = listingPresets.GetRect(hdStyle.lineHeight);
+			GUI.Box(section, Translator.Translate("OgreStack.Presets.Section.Ogre"), hdStyle);
+
+			section = listingPresets.GetRect(7);
+			color = GUI.color;
+			GUI.color = Color.grey;
+			Widgets.DrawLineHorizontal(section.x, section.y + 3, section.width);
+			GUI.color = color;
+
+			foreach (Preset p in Presets.GetOgrePresets())
+			{
+				section = listingPresets.GetRect(Verse.Text.LineHeight);
+				GUI.SetNextControlName(p.NameKey);
+				if (Widgets.ButtonText(section, Translator.Translate(p.NameKey)))
+					p.Modify(this.settings);
+
+				section = listingPresets.GetRect(1);
+			}
+
+			listingPresets.GetRect(7);
+
+			// Scalar
+			section = listingPresets.GetRect(hdStyle.lineHeight);
+			GUI.Box(section, Translator.Translate("OgreStack.Presets.Section.Scalar"), hdStyle);
+
+			section = listingPresets.GetRect(7);
+			color = GUI.color;
+			GUI.color = Color.grey;
+			Widgets.DrawLineHorizontal(section.x, section.y + 3, section.width);
+			GUI.color = color;
+
+			foreach(Preset p in Presets.GetScalarPresets())
+			{
+				section = listingPresets.GetRect(Verse.Text.LineHeight);
+				GUI.SetNextControlName(p.NameKey);
+				if (Widgets.ButtonText(section, Translator.Translate(p.NameKey)))
+					p.Modify(this.settings);
+
+				section = listingPresets.GetRect(1);
+			}
+
+			listingPresets.End();
+
+
+			// SETTINGS
+			listing.ColumnWidth = mainLeft.width;
+			listing.Begin(mainLeft);
+
+			section = listing.GetRect(Verse.Text.LineHeight + 2);
+			anchor = Text.Anchor;
 			Text.Anchor = TextAnchor.UpperLeft;
 			GUI.Box(section, Translator.Translate("OgreStack.SectionHeader.Settings"), headerStyle);
 			Text.Anchor = anchor;
 
-			Color color = GUI.color;
+			color = GUI.color;
 			GUI.color = Color.grey;
 			Widgets.DrawLineHorizontal(section.x, section.y + section.height - 1, section.width);
 			Widgets.DrawLineHorizontal(section.x, section.y + section.height - 2, section.width);
@@ -152,7 +215,6 @@ namespace OgreStack
 
 			foreach (Category c in allCats)
 			{
-
 				// separator line
 				Rect divider = listing.GetRect(7);
 				color = GUI.color;
@@ -213,11 +275,15 @@ namespace OgreStack
 				);
 
 				// VALUE
-				// this doesnt work worth a damn, its really difficult
-				// to enter non-integer values in this, not sure
-				// what the problem is
-				string buffer = this.settings.Values[c].Value.ToString();
-				Widgets.TextFieldNumeric<float>(boxValue, ref this.settings.Values[c].Value, ref buffer, 0.000001f, float.MaxValue);
+				this.settings.Values[c].Buffer = Widgets.TextField(boxValue, this.settings.Values[c].Buffer);
+
+				if (!this.settings.Values[c].ParseBuffer())
+				{
+					color = GUI.color;
+					GUI.color = new Color(0.662745f, 0f, 0f);
+					Widgets.DrawBox(GenUI.Rounded(boxValue), 2);
+					GUI.color = color;
+				}
 			}
 
 			Rect space = listing.GetRect(15);
@@ -225,7 +291,7 @@ namespace OgreStack
 			section = listing.GetRect(Verse.Text.LineHeight + 2);
 			anchor = Text.Anchor;
 			Text.Anchor = TextAnchor.UpperLeft;
-			GUI.Box(section, Translator.Translate("OgreStack.SectionHeader.Overrides"), headerStyle);
+			GUI.Box(section, Translator.Translate("OgreStack.SectionHeader.SingleThingDefTargeting"), headerStyle);
 			Text.Anchor = anchor;
 
 			color = GUI.color;
@@ -236,7 +302,7 @@ namespace OgreStack
 
 			anchor = Text.Anchor;
 			Text.Anchor = TextAnchor.MiddleLeft;
-			Widgets.Label(listing.GetRect(Verse.Text.LineHeight * 3), Translator.Translate("OgreStack.Settings.Overrides.Desc", DataUtil.GenerateFilePath(DataUtil._OVERRIDES_FILE_NAME).Replace("/", "\\")));
+			Widgets.Label(listing.GetRect(Verse.Text.LineHeight * 3), Translator.Translate("OgreStack.Settings.SingleThingDefTargeting.Desc", DataUtil.GenerateFilePath(DataUtil._OVERRIDES_FILE_NAME).Replace("/", "\\")));
 			Text.Anchor = anchor;
 
 			header = listing.GetRect(hdStyle.lineHeight);
@@ -248,7 +314,7 @@ namespace OgreStack
 			Text.Anchor = anchor;
 
 
-			foreach(KeyValuePair<string, int> kvp in overrides)
+			foreach (KeyValuePair<string, int> kvp in overrides)
 			{
 				string defName = kvp.Key;
 				int stackLimit = kvp.Value;
@@ -314,6 +380,22 @@ namespace OgreStack
 			Rect oRight = GenUI.RightPart(oContainer, 0.2f);
 			Widgets.Checkbox(oRight.x + oRight.width - 26, oRight.y, ref this.settings.IsDebug);
 
+			//oContainer = listing.GetRect(Verse.Text.LineHeight);
+			//GUI.SetNextControlName("preset_test");
+			//if (Widgets.ButtonText(oContainer, "Test"))
+			//{
+			//	this.settings.Values[Category.SmallVolumeResource].Buffer = "999";
+			//	if (this.settings.Values[Category.SmallVolumeResource].Mode == MultiplierMode.Fixed)
+			//	{
+			//		this.settings.Values[Category.SmallVolumeResource].Mode = MultiplierMode.Scalar;
+			//	}
+			//	else
+			//	{
+			//		this.settings.Values[Category.SmallVolumeResource].Mode = MultiplierMode.Fixed;
+			//	}
+			//}
+
+			//TooltipHandler.TipRegion(oContainer, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor rhoncus lacus, sed condimentum odio pretium sed. Pellentesque luctus velit id magna efficitur interdum. Duis nec dictum ante. Morbi urna nibh, ullamcorper id blandit viverra, molestie et risus. In hac habitasse platea dictumst. Suspendisse ut dictum velit, in vestibulum erat. Proin vel ultrices ante, eget tristique lorem. Donec scelerisque rutrum fermentum. Vivamus pulvinar nec augue a convallis. Donec ut tellus lorem. Maecenas at pharetra libero, a iaculis risus. Sed dui tellus, euismod sit amet egestas vitae, convallis at eros. Quisque sed placerat quam, vel luctus erat. Suspendisse leo tellus, porta in laoreet in, feugiat quis mi. Suspendisse fermentum aliquam metus id sollicitudin. Curabitur consectetur lacus ac dolor scelerisque vestibulum.");
 			listing.End();
 			Widgets.EndScrollView();
 		}
@@ -464,6 +546,9 @@ namespace OgreStack
 
 			if (writeCSV) { csvData = new List<string[]>(); };
 
+			Dictionary<Category, bool> parsedSettings = _PROCESSING_ORDER
+				.ToDictionary(x => x, y => this.settings.Values[y].ParseBuffer());
+
 			foreach (ThingDef thing in DefDatabase<ThingDef>.AllDefs)
 			{
 				if (isStackIncreaseAllowed(thing))
@@ -525,7 +610,13 @@ namespace OgreStack
 										limitAfterMatchProcessed = thing.stackLimit.ToString(); // for CSV
 										if (match)
 										{
-											this.settings.Values[processingOrder[c]].ProcessThing(thing, _activeThings);
+											if (parsedSettings[processingOrder[c]])
+											{
+												// successful parse from 
+												// the settings menu
+												this.settings.Values[processingOrder[c]].ProcessThing(thing, _activeThings);
+											}
+
 											category = processingOrder[c].ToString() + " " + this.settings.Values[processingOrder[c]].ToString();
 
 											support = mods[m].GetType().ToString();
@@ -543,7 +634,7 @@ namespace OgreStack
 					{
 						// still stackable, but not specifically
 						// targeted. use the 'other' setting
-						
+
 						this.settings.Values[Category.Other].ProcessThing(thing, _activeThings);
 						support = "OgreStack.Other";
 					}
