@@ -186,11 +186,7 @@ namespace OgreStack
 			
 			* <item name=""EggChickenUnfertilized"" stackLimit=""2000"" />
 		-->
-		
-		<item defName=""Silver"" stackLimit=""25000"" />
-		<item defName=""Beer"" stackLimit=""500"" />
-		<item defName=""Jade"" stackLimit=""15000"" />
-		<item defName=""Wort"" stackLimit=""2000"" />
+
 		<item defName=""AIPersonaCore"" stackLimit=""1"" />
 		<item defName=""TechprofSubpersonaCore"" stackLimit=""1"" />
 	</IndividualItemOverrides>
