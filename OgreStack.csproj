@@ -36,7 +36,9 @@
     <Compile Include="IndividualOverrides.cs" />
     <Compile Include="Models\CategorySetting.cs" />
     <Compile Include="Models\Mode.cs" />
+    <Compile Include="Models\Preset.cs" />
     <Compile Include="OgreStackMod.cs" />
+    <Compile Include="PersistentData\Presets.cs" />
     <Compile Include="PersistentData\Settings.cs" />
     <Compile Include="PersistentData\DataUtil.cs" />
     <Compile Include="ProcessAbstract.cs" />
