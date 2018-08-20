@@ -9,6 +9,27 @@
 
 	<!-- Stack Settings -->
 	<OgreStack.SectionHeader.Settings>Stack Settings</OgreStack.SectionHeader.Settings>
+	<OgreStack.SectionHeader.Presets>Presets</OgreStack.SectionHeader.Presets>
+
+	<!-- Preset Sections -->
+	<OgreStack.Presets.Section.Ogre>Ogre's Modes</OgreStack.Presets.Section.Ogre>
+	<OgreStack.Presets.Section.Scalar>Scalar</OgreStack.Presets.Section.Scalar>
+
+	<!-- Presets -->
+	<OgreStack.Presets.OgreDefault>Ogre (Default)</OgreStack.Presets.OgreDefault>
+	<OgreStack.Presets.OgreMid>Ogre Mid</OgreStack.Presets.OgreMid>
+	<OgreStack.Presets.OgreLow>Ogre Low</OgreStack.Presets.OgreLow>
+
+	<OgreStack.Presets.Scalar.1x>Vanilla</OgreStack.Presets.Scalar.1x>
+	<OgreStack.Presets.Scalar.2x>Double</OgreStack.Presets.Scalar.2x>
+	<OgreStack.Presets.Scalar.3x>Triple</OgreStack.Presets.Scalar.3x>
+	<OgreStack.Presets.Scalar.4x>4x</OgreStack.Presets.Scalar.4x>
+	<OgreStack.Presets.Scalar.5x>5x</OgreStack.Presets.Scalar.5x>
+	<OgreStack.Presets.Scalar.6x>6x</OgreStack.Presets.Scalar.6x>
+	<OgreStack.Presets.Scalar.7x>7x</OgreStack.Presets.Scalar.7x>
+	<OgreStack.Presets.Scalar.8x>8x</OgreStack.Presets.Scalar.8x>
+	<OgreStack.Presets.Scalar.9x>9x</OgreStack.Presets.Scalar.9x>
+	<OgreStack.Presets.Scalar.10x>10x</OgreStack.Presets.Scalar.10x>
 
 	<!-- Stack Settings: Table Headers -->
 	<OgreStack.Settings.Category>Category</OgreStack.Settings.Category>
@@ -75,11 +96,11 @@
 	<OgreStack.Settings.Other.Desc>Anything else that is stackable</OgreStack.Settings.Other.Desc>
 
 
-	<!-- Manual Overrides -->
-	<OgreStack.SectionHeader.Overrides>Manual Overrides</OgreStack.SectionHeader.Overrides>
+	<!-- Advanced: Manual Overrides -->
+	<OgreStack.SectionHeader.SingleThingDefTargeting><![CDATA[<color=#ffa500ff>(Advanced)</color> Individual Item Targeting]]></OgreStack.SectionHeader.SingleThingDefTargeting>
 	<OgreStack.Settings.DefName>defName</OgreStack.Settings.DefName>
 	<OgreStack.Settings.StackLimit>stackLimit</OgreStack.Settings.StackLimit>
-	<OgreStack.Settings.Overrides.Desc>Manual overrides are listed here. But they are only editable outside of the game via the Overrides.xml file. The Overrides.xml file is located here: {0}</OgreStack.Settings.Overrides.Desc>
+	<OgreStack.Settings.SingleThingDefTargeting.Desc><![CDATA[This section is only for people comfortable editing an XML file outside of RimWorld who want to set <color=#ffa500ff>Individual ThingDef</color> stackLimits that override the general stackLimits configured above above. The Overrides.xml file is located here: <color=#ffa500ff><size=13>{0}</size></color>]]></OgreStack.Settings.SingleThingDefTargeting.Desc>
 
 	<!-- Debug -->
 	<OgreStack.SectionHeader.Debug>Debug</OgreStack.SectionHeader.Debug>
