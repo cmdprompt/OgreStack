@@ -12,11 +12,22 @@ namespace OgreStack
 			this.Mode = mode;
 		}
 
+		//=====================================================================================================\\
+
 		public CategorySetting(MultiplierMode mode, float value)
-			: this(mode)
 		{
 			this.Mode = mode;
 			this.Value = value;
+			this.Buffer = value.ToString();
+		}
+
+		//=====================================================================================================\\
+
+		public CategorySetting(MultiplierMode mode, string buffer) 
+		{
+			this.Mode = mode;
+			this.Buffer = buffer;
+			this.Value = float.TryParse(buffer, out this.Value) ? this.Value : 0f;
 		}
 
 		//=====================================================================================================\\
@@ -27,6 +38,31 @@ namespace OgreStack
 
 		public MultiplierMode Mode;
 		public float Value;
+		public string Buffer;
+
+		//=====================================================================================================\\
+
+		public void Modify(MultiplierMode mode, float value, string buffer)
+		{
+			this.Mode = mode;
+			this.Value = value;
+			this.Buffer = buffer;
+		}
+
+		//=====================================================================================================\\
+
+		public bool ParseBuffer()
+		{
+			if (float.TryParse(this.Buffer, out this.Value))
+			{
+				return true;
+			}
+			else
+			{
+				this.Value = 0f;
+				return false;
+			}
+		}
 
 		//=====================================================================================================\\
 
