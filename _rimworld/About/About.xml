@@ -2,7 +2,7 @@
 <ModMetaData>
 		<name>OgreStack</name>
 		<author>Ogre</author>
-		<targetVersion>1.0.0</targetVersion>
+		<targetVersion>0.19.1998</targetVersion>
 		<description>Mod for customizing stack sizes. As well as the ability to target specific items.
 
 Improvements for v1.0:
@@ -47,11 +47,7 @@ Defaults:
  - Artifacts : 10 ( psychic lances, ... )
  - Other Stackables : x10 ( other items that stack but do not use vanilla game categories )
 
-(Individual)
- - Silver : 25000
- - Jade : 15000
- - Beer : 500
- - Wort : 2000
+(Advanced - Individual ItemDefs)
  - AIPersonaCore : 1
  - TechprofSubpersonaCore : 1
 
