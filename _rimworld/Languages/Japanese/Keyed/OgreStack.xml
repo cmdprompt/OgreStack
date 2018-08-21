@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <OgreStack.ModName>OgreStack</OgreStack.ModName>
 
   <!-- Mode Options -->
@@ -99,13 +98,13 @@
 
   <!-- Manual Overrides -->
   <OgreStack.SectionHeader.Overrides>手動で上書きした</OgreStack.SectionHeader.Overrides>
-  <OgreStack.Settings.DefName>defName</OgreStack.Settings.DefName>
-  <OgreStack.Settings.StackLimit>stackLimit</OgreStack.Settings.StackLimit>
+  <OgreStack.Settings.DefName>DefName</OgreStack.Settings.DefName>
+  <OgreStack.Settings.StackLimit>スタック上限</OgreStack.Settings.StackLimit>
   <OgreStack.Settings.Overrides.Desc>手動で上書きした項目がここにリストされています。しかし、それらはOverrides.xmlファイルを介してのみゲーム外でのみ編集可能です。Overrides.xmlファイルは、次の場所にあります。\n\n保存先：{0}</OgreStack.Settings.Overrides.Desc>
 
   <!-- Debug -->
-  <OgreStack.SectionHeader.Debug>Debug</OgreStack.SectionHeader.Debug>
-  <OgreStack.Settings.CSV.Title>Write Processed DefsList CSV</OgreStack.Settings.CSV.Title>
+  <OgreStack.SectionHeader.Debug>デバッグ</OgreStack.SectionHeader.Debug>
+  <OgreStack.Settings.CSV.Title>DefsListをCSVに出力する</OgreStack.Settings.CSV.Title>
   <OgreStack.Settings.CSV.Desc>スタック可能なすべてのThingDef、元のスタック値、ModFileによって変更された最終的なスタック上限値、つまりデバッグ情報を書き込みます。\n\nこれはスタック上限が変更されたときにのみ発生する事に注意してください。このチェックボックスのチェックだけでは発生しません。\n\n出力ファイルの名前はOgreStack_DefsList.csvで、OgreStackがインストールされたフォルダ内のRimWorld savedataの場所に配置されます。\n\n保存先：{0}</OgreStack.Settings.CSV.Desc>
 
 
