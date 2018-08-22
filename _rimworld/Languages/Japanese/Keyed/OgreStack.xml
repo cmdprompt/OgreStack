@@ -95,12 +95,11 @@
   <OgreStack.Settings.Other.Title>その他</OgreStack.Settings.Other.Title>
   <OgreStack.Settings.Other.Desc>スタック可能な何らかのアイテム</OgreStack.Settings.Other.Desc>
 
-
-  <!-- Manual Overrides -->
-  <OgreStack.SectionHeader.Overrides>手動で上書きした</OgreStack.SectionHeader.Overrides>
+  <!-- Advanced: Manual Overrides -->
+  <OgreStack.SectionHeader.SingleThingDefTargeting><![CDATA[<color=#ffa500ff>(拡張設定)</color>個別のアイテムを指定します]]></OgreStack.SectionHeader.SingleThingDefTargeting>
   <OgreStack.Settings.DefName>DefName</OgreStack.Settings.DefName>
   <OgreStack.Settings.StackLimit>スタック上限</OgreStack.Settings.StackLimit>
-  <OgreStack.Settings.Overrides.Desc>手動で上書きした項目がここにリストされています。しかし、それらはOverrides.xmlファイルを介してのみゲーム外でのみ編集可能です。Overrides.xmlファイルは、次の場所にあります。\n\n保存先：{0}</OgreStack.Settings.Overrides.Desc>
+  <OgreStack.Settings.SingleThingDefTargeting.Desc><![CDATA[ このセクションは、RimWorld外部でXMLファイルを快適に編集したい人向けです。<color=#ffa500ff>個別のThingDef</color>で設定された一般的なstackLimit(スタック上限)を新しいstackLimits(スタック上限)で上書きします。\nOverrides.xmlファイルの場所：\n<color=#ffa500ff><size=13>{0}</size></color>]]>\n</OgreStack.Settings.SingleThingDefTargeting.Desc>
 
   <!-- Debug -->
   <OgreStack.SectionHeader.Debug>デバッグ</OgreStack.SectionHeader.Debug>
