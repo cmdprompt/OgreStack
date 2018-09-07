@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<OgreStack.ModName>OgreStack</OgreStack.ModName>
+	
+	<!-- Mode Options -->
+	<OgreStack.Settings.Mode.Scalar>Escalar</OgreStack.Settings.Mode.Scalar>
+	<OgreStack.Settings.Mode.Fixed>Fijar</OgreStack.Settings.Mode.Fixed>
+
+
+	<!-- Stack Settings -->
+	!<OgreStack.SectionHeader.Settings>Configuración del apilamiento</OgreStack.SectionHeader.Settings>
+	<OgreStack.SectionHeader.Presets>Preajustes</OgreStack.SectionHeader.Presets>
+
+	<!-- Preset Sections -->
+	<OgreStack.Presets.Section.Ogre>Ogre Modos</OgreStack.Presets.Section.Ogre>
+	<OgreStack.Presets.Section.Scalar>Escalar</OgreStack.Presets.Section.Scalar>
+
+	<!-- Presets -->
+	<OgreStack.Presets.OgreDefault>Ogre (Predeterminado)</OgreStack.Presets.OgreDefault>
+	<OgreStack.Presets.OgreMid>Ogre Medio</OgreStack.Presets.OgreMid>
+	<OgreStack.Presets.OgreLow>Ogre Bajo</OgreStack.Presets.OgreLow>
+
+	<OgreStack.Presets.Scalar.1x>Vanilla</OgreStack.Presets.Scalar.1x>
+	<OgreStack.Presets.Scalar.2x>Doble</OgreStack.Presets.Scalar.2x>
+	<OgreStack.Presets.Scalar.3x>Triple</OgreStack.Presets.Scalar.3x>
+	<OgreStack.Presets.Scalar.4x>4x</OgreStack.Presets.Scalar.4x>
+	<OgreStack.Presets.Scalar.5x>5x</OgreStack.Presets.Scalar.5x>
+	<OgreStack.Presets.Scalar.6x>6x</OgreStack.Presets.Scalar.6x>
+	<OgreStack.Presets.Scalar.7x>7x</OgreStack.Presets.Scalar.7x>
+	<OgreStack.Presets.Scalar.8x>8x</OgreStack.Presets.Scalar.8x>
+	<OgreStack.Presets.Scalar.9x>9x</OgreStack.Presets.Scalar.9x>
+	<OgreStack.Presets.Scalar.10x>10x</OgreStack.Presets.Scalar.10x>
+
+	<!-- Stack Settings: Table Headers -->
+	<OgreStack.Settings.Category>Categoría</OgreStack.Settings.Category>
+	<OgreStack.Settings.Mode>Modo</OgreStack.Settings.Mode>
+	<OgreStack.Settings.Mode.Desc>Fijar: Cada artículo que coincida con una categoría tendrá un tamaño de apilamiento determinado por su valor.\n(Bueno para artículos que son similares y tienen tamaños de apilamiento estándar similares: como tela y cuero).\n\nScalar: Significa que cada elemento que coincida con la categoría tendrá su tamaño de apilamiento de juego base multiplicado por el valor.\n(Bueno para artículos que no son similares o que tienen tamaños de base muy diferentes: como los manufacturados).</OgreStack.Settings.Mode.Desc>
+	<OgreStack.Settings.Value>Valor</OgreStack.Settings.Value>
+
+	<!-- Stack Settings: Category Titles / ToolTip Descriptions -->
+	<OgreStack.Settings.SmallVolumeResource.Title>Recursos de escaso volumen</OgreStack.Settings.SmallVolumeResource.Title>
+	<OgreStack.Settings.SmallVolumeResource.Desc>Oro, Uranio ...</OgreStack.Settings.SmallVolumeResource.Desc>
+
+	<OgreStack.Settings.Resource.Title>Recursos</OgreStack.Settings.Resource.Title>
+	<OgreStack.Settings.Resource.Desc>Acero, plastiacero, madera, jade ...</OgreStack.Settings.Resource.Desc>
+
+	<OgreStack.Settings.RawFoodMeat.Title>Carne cruda</OgreStack.Settings.RawFoodMeat.Title>
+	<OgreStack.Settings.RawFoodMeat.Desc>Carne, leche, huevos ...</OgreStack.Settings.RawFoodMeat.Desc>
+
+	<OgreStack.Settings.RawFoodPlant.Title>Vegetales crudos</OgreStack.Settings.RawFoodPlant.Title>
+	<OgreStack.Settings.RawFoodPlant.Desc>Maíz, bayas, arroz, ...</OgreStack.Settings.RawFoodPlant.Desc>
+
+	<OgreStack.Settings.PlantMatter.Title>Plantas crudas</OgreStack.Settings.PlantMatter.Title>
+	<OgreStack.Settings.PlantMatter.Desc>Lúpulo, hojas de psicoides, hojas humentes ...</OgreStack.Settings.PlantMatter.Desc>
+
+	<OgreStack.Settings.Meal.Title>Comidas</OgreStack.Settings.Meal.Title>
+	<OgreStack.Settings.Meal.Desc>Buena comida, Comida gourmet ...</OgreStack.Settings.Meal.Desc>
+
+	<OgreStack.Settings.FoodForAnimal.Title>Comida para animales</OgreStack.Settings.FoodForAnimal.Title>
+	<OgreStack.Settings.FoodForAnimal.Desc>Heno, croquetas ...</OgreStack.Settings.FoodForAnimal.Desc>
+
+	<OgreStack.Settings.Food.Title>Alimentos</OgreStack.Settings.Food.Title>
+	<OgreStack.Settings.Food.Desc>Pemmican, chocolate ...</OgreStack.Settings.Food.Desc>
+
+	<OgreStack.Settings.Item.Title>Artículos</OgreStack.Settings.Item.Title>
+	<OgreStack.Settings.Item.Desc>Cuernos, sueros mecanoides ...</OgreStack.Settings.Item.Desc>
+
+	<OgreStack.Settings.BodyPartOrImplant.Title>Partes del cuerpo e implantes</OgreStack.Settings.BodyPartOrImplant.Title>
+	<OgreStack.Settings.BodyPartOrImplant.Desc>Órganos, brazos, biónica, implantes ...</OgreStack.Settings.BodyPartOrImplant.Desc>
+
+	<OgreStack.Settings.Leather.Title>Cueros</OgreStack.Settings.Leather.Title>
+	<OgreStack.Settings.Leather.Desc>Cueros ...</OgreStack.Settings.Leather.Desc>
+
+	<OgreStack.Settings.Textile.Title>Textiles</OgreStack.Settings.Textile.Title>
+	<OgreStack.Settings.Textile.Desc>Paños, Lana ...</OgreStack.Settings.Textile.Desc>
+
+	<OgreStack.Settings.StoneBlock.Title>Bloques de piedra</OgreStack.Settings.StoneBlock.Title>
+	<OgreStack.Settings.StoneBlock.Desc>Granito, mármol ...</OgreStack.Settings.StoneBlock.Desc>
+
+	<OgreStack.Settings.Manufactured.Title>Manufacturado</OgreStack.Settings.Manufactured.Title>
+	<OgreStack.Settings.Manufactured.Desc>Mosto, componentes, neutroamina, biocombustible ...</OgreStack.Settings.Manufactured.Desc>
+
+	<OgreStack.Settings.Drug.Title>Drogas</OgreStack.Settings.Drug.Title>
+	<OgreStack.Settings.Drug.Desc>Cerveza, ambrosía, yayo ...</OgreStack.Settings.Drug.Desc>
+
+	<OgreStack.Settings.Medicine.Title>Medicina</OgreStack.Settings.Medicine.Title>
+	<OgreStack.Settings.Medicine.Desc>Medicina, hierbas medicinales, Medicina mundobrillante ...</OgreStack.Settings.Medicine.Desc>
+
+	<OgreStack.Settings.MortarShell.Title>Proyectiles de mortero</OgreStack.Settings.MortarShell.Title>
+	<OgreStack.Settings.MortarShell.Desc>Poryectil explosivo, obús de antimateria, obús PEM ...</OgreStack.Settings.MortarShell.Desc>
+
+	<OgreStack.Settings.Artifact.Title>Artefactos</OgreStack.Settings.Artifact.Title>
+	<OgreStack.Settings.Artifact.Desc>Lanza de locura psíquica, púlsar psíquico animal ...</OgreStack.Settings.Artifact.Desc>
+
+	<OgreStack.Settings.Other.Title>Otros</OgreStack.Settings.Other.Title>
+	<OgreStack.Settings.Other.Desc>Cualquier otra cosa que sea apilable</OgreStack.Settings.Other.Desc>
+
+
+	<!-- Advanced: Manual Overrides -->
+	<OgreStack.SectionHeader.SingleThingDefTargeting><![CDATA[<color=#ffa500ff>(Avanzado)</color> Enfoque de artículos individuales]]></OgreStack.SectionHeader.SingleThingDefTargeting>
+	<OgreStack.Settings.DefName>defName</OgreStack.Settings.DefName>
+	<OgreStack.Settings.StackLimit>limite de apilamiento</OgreStack.Settings.StackLimit>
+	<OgreStack.Settings.SingleThingDefTargeting.Desc><![CDATA[Esta sección es sólo para personas que se sienten cómodas editando un archivo XML fuera de RimWorld y que desean configurar <color=#ffa500ff>ThingDef individuales</color> que sustituyen el limite de apilamiento general configurado anteriormente. El archivo Overrides.xml se encuentra aquí: <color=#ffa500ff><size=13>{0}</size></color>]]></OgreStack.Settings.SingleThingDefTargeting.Desc>
+
+	<!-- Debug -->
+	<OgreStack.SectionHeader.Debug>Debug</OgreStack.SectionHeader.Debug>
+	<OgreStack.Settings.CSV.Title>Registrar DefsList CSV procesados</OgreStack.Settings.CSV.Title>
+	<OgreStack.Settings.CSV.Desc>Registra todos los ThingDefs que son aptos para el apilamiento, sus valores de pila originales, que ModFile los modificó, valores de pila finales, es decir, información de depuración.\n\nTenga en cuenta que esto sólo ocurre cuando se modifican los apilamientos. No sólo por marcar esta casilla.\n\nEl archivo producido se llama OgreStack_DefsList.csv y se ubicará en la ubicación de datos guardados de RimWorld en la carpeta OgreStack.\n\nLocalización: {0}</OgreStack.Settings.CSV.Desc>
+
+	
+	
+
+</LanguageData>
