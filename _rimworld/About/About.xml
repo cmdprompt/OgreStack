@@ -2,7 +2,7 @@
 <ModMetaData>
 		<name>OgreStack</name>
 		<author>Ogre</author>
-		<targetVersion>0.19.1998</targetVersion>
+		<targetVersion>0.19.2009</targetVersion>
 		<description>Mod for customizing stack sizes. As well as the ability to target specific items.
 
 Improvements for v1.0:
