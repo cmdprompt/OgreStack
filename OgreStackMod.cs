@@ -25,21 +25,37 @@ namespace OgreStack
 				Verse.Log.Message("[OgreStack]: Remodify From Settings Change");
 
 				_activeThings = new Dictionary<string, List<Thing>>();
-				foreach (Map m in Verse.Find.Maps)
+				List<Map> maps = Verse.Find.Maps;
+
+				foreach (Map m in maps)
 				{
-					foreach (Thing t in m.listerThings.AllThings)
+					if (m != null && m.listerThings != null)
 					{
-						if (t != null && t.def != null && !string.IsNullOrEmpty(t.def.defName) && this.isStackIncreaseAllowed(t.def))
+						List<Thing> things = m.listerThings.AllThings;
+						foreach (Thing t in things)
 						{
-							List<Thing> things = null;
-							if (!_activeThings.TryGetValue(t.def.defName, out things))
+							if (t != null && t.def != null && !string.IsNullOrEmpty(t.def.defName) && this.isStackIncreaseAllowed(t.def))
 							{
-								things = new List<Thing>();
-								_activeThings.Add(t.def.defName, things);
+								if (!_activeThings.ContainsKey(t.def.defName))
+									_activeThings.Add(t.def.defName, new List<Thing>());
+
+								_activeThings[t.def.defName].Add(t);
 							}
-							things.Add(t);
 						}
 					}
+					//foreach (Thing t in m.listerThings.AllThings)
+					//{
+					//	if (t != null && t.def != null && !string.IsNullOrEmpty(t.def.defName) && this.isStackIncreaseAllowed(t.def))
+					//	{
+					//		List<Thing> things = null;
+					//		if (!_activeThings.TryGetValue(t.def.defName, out things))
+					//		{
+					//			things = new List<Thing>();
+					//			_activeThings.Add(t.def.defName, things);
+					//		}
+					//		things.Add(t);
+					//	}
+					//}
 				}
 
 				this.ModifyStackSizes();

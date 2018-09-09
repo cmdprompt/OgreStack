@@ -23,7 +23,7 @@ namespace OgreStack
 
 		//=====================================================================================================\\
 
-		public CategorySetting(MultiplierMode mode, string buffer) 
+		public CategorySetting(MultiplierMode mode, string buffer)
 		{
 			this.Mode = mode;
 			this.Buffer = buffer;
@@ -130,18 +130,31 @@ namespace OgreStack
 									if (comp != null)
 										isForbidden = comp.Forbidden;
 								}
-								for (int over = t.stackCount - stackLimit; over > 0; over = over - stackLimit)
-								{
-									Thing remain = ThingMaker.MakeThing(t.def, stuff);
-									remain.stackCount = Math.Min(over, stackLimit);
-									remain.HitPoints = Math.Min(t.HitPoints, remain.MaxHitPoints);
 
-									if (isForbidden)
-										(remain as ThingWithComps).GetComp<RimWorld.CompForbiddable>().Forbidden = true;
-									
-									Verse.GenPlace.TryPlaceThing(remain, t.Position, t.Map, ThingPlaceMode.Near);
+								if (t.Position != null && t.Map != null)
+								{
+									for (int over = t.stackCount - stackLimit; over > 0; over = over - stackLimit)
+									{
+										Thing remain = (stuff == null)
+											? ThingMaker.MakeThing(t.def)
+											: ThingMaker.MakeThing(t.def, stuff);
+
+										remain.stackCount = Math.Min(over, stackLimit);
+										remain.HitPoints = Math.Min(t.HitPoints, remain.MaxHitPoints);
+
+										if (isForbidden)
+										{
+											ThingWithComps twc = remain as ThingWithComps;
+											RimWorld.CompForbiddable ftwc = twc.GetComp<RimWorld.CompForbiddable>();
+											if (ftwc != null)
+												ftwc.Forbidden = true;
+
+										}
+
+										Verse.GenPlace.TryPlaceThing(remain, t.Position, t.Map, ThingPlaceMode.Near);
+									}
 								}
-								
+
 								t.stackCount = stackLimit;
 							}
 						}
