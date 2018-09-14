@@ -476,6 +476,7 @@ namespace OgreStack
 				new Support.TiberiumRim(),
 				new Support.MedievalTimes(),
 				new Support.GeneticRim(),
+				new Support.ExpandedWoodworking(),
 
 				// Base Game Defs
 				new Support.RimWorld()
