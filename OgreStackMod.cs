@@ -26,38 +26,29 @@ namespace OgreStack
 
 				_activeThings = new Dictionary<string, List<Thing>>();
 				List<Map> maps = Verse.Find.Maps;
-
-				foreach (Map m in maps)
+				// this can be done from the game load screen
+				// with no active save loaded, which will
+				// make maps null
+				if (maps != null)
 				{
-					if (m != null && m.listerThings != null)
+					foreach (Map m in maps)
 					{
-						List<Thing> things = m.listerThings.AllThings;
-						foreach (Thing t in things)
+						if (m != null && m.listerThings != null)
 						{
-							if (t != null && t.def != null && !string.IsNullOrEmpty(t.def.defName) && this.isStackIncreaseAllowed(t.def))
+							List<Thing> things = m.listerThings.AllThings;
+							foreach (Thing t in things)
 							{
-								if (!_activeThings.ContainsKey(t.def.defName))
-									_activeThings.Add(t.def.defName, new List<Thing>());
+								if (t != null && t.def != null && !string.IsNullOrEmpty(t.def.defName) && this.isStackIncreaseAllowed(t.def))
+								{
+									if (!_activeThings.ContainsKey(t.def.defName))
+										_activeThings.Add(t.def.defName, new List<Thing>());
 
-								_activeThings[t.def.defName].Add(t);
+									_activeThings[t.def.defName].Add(t);
+								}
 							}
 						}
 					}
-					//foreach (Thing t in m.listerThings.AllThings)
-					//{
-					//	if (t != null && t.def != null && !string.IsNullOrEmpty(t.def.defName) && this.isStackIncreaseAllowed(t.def))
-					//	{
-					//		List<Thing> things = null;
-					//		if (!_activeThings.TryGetValue(t.def.defName, out things))
-					//		{
-					//			things = new List<Thing>();
-					//			_activeThings.Add(t.def.defName, things);
-					//		}
-					//		things.Add(t);
-					//	}
-					//}
 				}
-
 				this.ModifyStackSizes();
 
 				_activeThings.Clear();
