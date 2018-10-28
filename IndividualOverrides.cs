@@ -53,7 +53,7 @@ namespace OgreStack
 								{
 									Dictionary<string, string> attributes = getAttributePairs(cat);
 									string category = string.Empty;
-									if (attributes.TryGetValue("defName", out category))
+									if (attributes.TryGetValue("name", out category))
 									{
 										category = category.Trim();
 										if (!string.IsNullOrEmpty(category))
