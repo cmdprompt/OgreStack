@@ -184,7 +184,7 @@ namespace OgreStack
 			* FORMAT: <item defName=""<string:DefName>"" stackLimit=""<int:desiredStackLimit>"" />
 			* Example: set the stack limit for unfertilized chicken eggs to 2000
 			
-			* <item name=""EggChickenUnfertilized"" stackLimit=""2000"" />
+			* <item defName=""EggChickenUnfertilized"" stackLimit=""2000"" />
 		-->
 
 		<item defName=""AIPersonaCore"" stackLimit=""1"" />
