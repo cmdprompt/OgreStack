@@ -469,6 +469,8 @@ namespace OgreStack
 				new Support.GeneticRim(),
 				new Support.ExpandedWoodworking(),
 
+				new Support.MiscForbid(),
+
 				// Base Game Defs
 				new Support.RimWorld()
 			};

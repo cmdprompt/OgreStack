@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-		<name>OgreStack</name>
-		<author>Ogre</author>
-		<targetVersion>1.0.2059</targetVersion>
-		<description>Mod for customizing stack sizes. As well as the ability to target specific items.
+	<name>OgreStack</name>
+	<author>Ogre</author>
+	<supportedVersions>
+		<li>1.0</li>
+	</supportedVersions>
+	<description>Mod for customizing stack sizes. As well as the ability to target specific items.
 
 Improvements for v1.0:
  - Stack changes now do NOT require a game reload, if a stack is modified 
@@ -52,6 +54,5 @@ Defaults:
  - TechprofSubpersonaCore : 1
 
 GitHub: https://github.com/cmdprompt/OgreStack
-B18: https://steamcommunity.com/sharedfiles/filedetails/?id=1212016985
 </description>
 </ModMetaData>
