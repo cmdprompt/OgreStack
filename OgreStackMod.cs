@@ -58,10 +58,11 @@ namespace OgreStack
 			// this appears to be a technique to attempt
 			// processing after other mods have loaded
 			// its not a guarantee though
-
 			Verse.LongEventHandler.QueueLongEvent(() => {
-				this.ModifyStackSizes();
-			}, "OgreStack_Init", false, null);
+				Verse.LongEventHandler.QueueLongEvent(() => {
+					this.ModifyStackSizes();
+				}, "OgreStack_Init_Execute", true, null);
+			}, "OgreStack_Init_Reg", true, null);
 		}
 
 		//=====================================================================================================\\
@@ -468,6 +469,7 @@ namespace OgreStack
 				new Support.MedievalTimes(),
 				new Support.GeneticRim(),
 				new Support.ExpandedWoodworking(),
+				new Support.RimWorldOfMagic(),
 
 				new Support.MiscForbid(),
 
@@ -538,7 +540,7 @@ namespace OgreStack
 		}
 
 		//=====================================================================================================\\
-
+		
 		internal void ModifyStackSizes()
 		{
 			List<ModDefinition> mods = this.getSupportedMods();
@@ -684,6 +686,23 @@ namespace OgreStack
 			// like stacked bionics
 			RimWorld.ResourceCounter.ResetDefs();
 
+			HashSet<string> highlander = new HashSet<string>(DefDatabase<ThingDef>.AllDefs.Select(x => x.defName));
+			foreach (TreeNode_ThingCategory catNode in Verse.ThingCategoryNodeDatabase.AllThingCategoryNodes)
+			{
+				for (int i = catNode.catDef.childThingDefs.Count - 1; i > -1; i--)
+				{
+					if (!highlander.Contains(catNode.catDef.childThingDefs[i].defName))
+					{
+						// if a mod removes a def from the defslist
+						// it doesnt get removed from the category list
+						// causing errors to show up when rimworld
+						// tries to show the resource tree list
+						// on the left of the screen
+						catNode.catDef.childThingDefs.RemoveAt(i);
+					}
+				}
+			}
+				
 			if (writeCSV)
 			{
 				csvData = csvData
