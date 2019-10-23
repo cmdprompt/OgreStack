@@ -464,13 +464,15 @@ namespace OgreStack
 		{
 			List<ModDefinition> mods = new List<ModDefinition>() {
 				new Support.VegetableGarden(),
+				new Support.RimCuisine2(),
 				new Support.CuprosDrinks(),
 				new Support.TiberiumRim(),
 				new Support.MedievalTimes(),
 				new Support.GeneticRim(),
 				new Support.ExpandedWoodworking(),
 				new Support.RimWorldOfMagic(),
-
+				new Support.Ammunition(),
+				
 				new Support.MiscForbid(),
 
 				// Base Game Defs

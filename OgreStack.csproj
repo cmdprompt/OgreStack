@@ -43,11 +43,13 @@
     <Compile Include="PersistentData\DataUtil.cs" />
     <Compile Include="ProcessAbstract.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Support\Ammunition.cs" />
     <Compile Include="Support\MiscForbid.cs" />
     <Compile Include="Support\CuprosDrinks.cs" />
     <Compile Include="Support\ExpandedWoodworking.cs" />
     <Compile Include="Support\GeneticRim.cs" />
     <Compile Include="Support\MedievalTimes.cs" />
+    <Compile Include="Support\RimCuisine2.cs" />
     <Compile Include="Support\RimWorld.cs" />
     <Compile Include="Support\RimWorldOfMagic.cs" />
     <Compile Include="Support\TiberiumRim.cs" />
