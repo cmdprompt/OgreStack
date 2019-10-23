@@ -92,7 +92,7 @@ namespace OgreStack
 			Dictionary<string, string> data = getAttributePairs(def);
 			string defName = string.Empty;
 			string sLimit = string.Empty;
-			if (data.TryGetValue("defName", out defName))
+			if (data.TryGetValue("defName", out defName) || data.TryGetValue("name", out defName))
 			{
 				defName = defName.Trim();
 				if (data.TryGetValue("stackLimit", out sLimit))
