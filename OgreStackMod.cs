@@ -528,11 +528,14 @@ namespace OgreStack
 					foreach (CompProperties x in d.comps)
 					{
 						// things that have quality on them ( legendary, excellent, etc)
-						// would be confusing if they were stacked in game since the 
-						// UI wouldn't show all the different qualities of the stacked items
+						// like apparel don't stack
 						if (x.compClass == typeof(RimWorld.CompQuality))
 						{
-							stackable = false;
+							stackable = (d.stackLimit > 1)
+								? true   // has quality, but the author of the mod specifically wants the item stackable
+								: false; // default to not stackable
+
+							break;
 						}
 					}
 				}
