@@ -1,10 +1,7 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OgreStack", "OgreStack.csproj", "{660B6FE9-6706-4992-BC93-6AF58492D750}"
-EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "_rimworld", "_rimworld\", "{2173D849-7B74-49D7-873B-06D4283FBFD8}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
@@ -26,21 +23,37 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "_rimworld", "_rimworld\", "
 		SlnRelativePath = "_rimworld\"
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.0", "1.0", "{01EC0D9E-A7B6-4B06-83CB-700A1578D943}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OgreStack", "1.0\OgreStack.csproj", "{660B6FE9-6706-4992-BC93-6AF58492D750}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.1", "1.1", "{810BF847-B3C0-4F60-ADE5-CA0F9D2BEC04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OgreStack", "1.1\OgreStack.csproj", "{17FFC0C9-4A6D-41C3-B90C-076DC4E6927B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2173D849-7B74-49D7-873B-06D4283FBFD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2173D849-7B74-49D7-873B-06D4283FBFD8}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{2173D849-7B74-49D7-873B-06D4283FBFD8}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{660B6FE9-6706-4992-BC93-6AF58492D750}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{660B6FE9-6706-4992-BC93-6AF58492D750}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{660B6FE9-6706-4992-BC93-6AF58492D750}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{660B6FE9-6706-4992-BC93-6AF58492D750}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2173D849-7B74-49D7-873B-06D4283FBFD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2173D849-7B74-49D7-873B-06D4283FBFD8}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{2173D849-7B74-49D7-873B-06D4283FBFD8}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{17FFC0C9-4A6D-41C3-B90C-076DC4E6927B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17FFC0C9-4A6D-41C3-B90C-076DC4E6927B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17FFC0C9-4A6D-41C3-B90C-076DC4E6927B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17FFC0C9-4A6D-41C3-B90C-076DC4E6927B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{660B6FE9-6706-4992-BC93-6AF58492D750} = {01EC0D9E-A7B6-4B06-83CB-700A1578D943}
+		{17FFC0C9-4A6D-41C3-B90C-076DC4E6927B} = {810BF847-B3C0-4F60-ADE5-CA0F9D2BEC04}
 	EndGlobalSection
 EndGlobal
