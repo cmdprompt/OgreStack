@@ -3,8 +3,8 @@
 	<name>OgreStack</name>
 	<author>Ogre</author>
 	<supportedVersions>
-		<li>1.0</li>
 		<li>1.1</li>
+		<li>1.2</li>
 	</supportedVersions>
 	<packageId>Ogre.OgreStack</packageId>
 	<description>Mod for customizing stack sizes. As well as the ability to target specific items.

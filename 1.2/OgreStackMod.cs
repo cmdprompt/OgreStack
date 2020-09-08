@@ -692,7 +692,7 @@ namespace OgreStack
 			RimWorld.ResourceCounter.ResetDefs();
 
 			HashSet<string> highlander = new HashSet<string>(DefDatabase<ThingDef>.AllDefs.Select(x => x.defName));
-			foreach (TreeNode_ThingCategory catNode in Verse.ThingCategoryNodeDatabase.AllThingCategoryNodes)
+			foreach (TreeNode_ThingCategory catNode in Verse.ThingCategoryNodeDatabase.allThingCategoryNodes)
 			{
 				for (int i = catNode.catDef.childThingDefs.Count - 1; i > -1; i--)
 				{
