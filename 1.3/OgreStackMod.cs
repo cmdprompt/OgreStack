@@ -310,7 +310,8 @@ namespace OgreStack
 
 			anchor = Text.Anchor;
 			Text.Anchor = TextAnchor.MiddleLeft;
-			Widgets.Label(listing.GetRect(Verse.Text.LineHeight * 3), Translator.Translate("OgreStack.Settings.SingleThingDefTargeting.Desc", DataUtil.GenerateFilePath(DataUtil._OVERRIDES_FILE_NAME).Replace("/", "\\")));
+			//Widgets.Label(listing.GetRect(Verse.Text.LineHeight * 3), Translator.Translate("OgreStack.Settings.SingleThingDefTargeting.Desc", DataUtil.GenerateFilePath(DataUtil._OVERRIDES_FILE_NAME).Replace("/", "\\")));
+			Widgets.Label(listing.GetRect(Verse.Text.LineHeight * 3), TranslatorFormattedStringExtensions.Translate("OgreStack.Settings.SingleThingDefTargeting.Desc", new NamedArgument(DataUtil.GenerateFilePath(DataUtil._OVERRIDES_FILE_NAME).Replace("/", "\\"), "{0}")));
 			Text.Anchor = anchor;
 
 			header = listing.GetRect(hdStyle.lineHeight);
@@ -383,8 +384,8 @@ namespace OgreStack
 			Widgets.Label(oLeft, Translator.Translate("OgreStack.Settings.CSV.Title"));
 			Text.Anchor = anchor;
 
-			TooltipHandler.TipRegion(oLeft, Translator.Translate("OgreStack.Settings.CSV.Desc", DataUtil.GenerateFilePath("OgreStack_DefsList.csv").Replace("/", "\\")));
-
+			//TooltipHandler.TipRegion(oLeft, Translator.Translate("OgreStack.Settings.CSV.Desc", DataUtil.GenerateFilePath("OgreStack_DefsList.csv").Replace("/", "\\")));
+			TooltipHandler.TipRegion(oLeft, TranslatorFormattedStringExtensions.Translate("OgreStack.Settings.CSV.Desc", new NamedArgument(DataUtil.GenerateFilePath("OgreStack_DefsList.csv").Replace("/", "\\"), "{0}")));
 			Rect oRight = GenUI.RightPart(oContainer, 0.2f);
 			Widgets.Checkbox(oRight.x + oRight.width - 26, oRight.y, ref this.settings.IsDebug);
 

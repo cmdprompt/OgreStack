@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5072359B-015A-46A4-B02C-E72851589312}</ProjectGuid>
+    <ProjectGuid>{8F50D707-7E5C-4927-848E-22F5CB6CDBC5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>OgreStack</RootNamespace>
