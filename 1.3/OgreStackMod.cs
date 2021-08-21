@@ -474,6 +474,7 @@ namespace OgreStack
 				new Support.RimWorldOfMagic(),
 				new Support.Ammunition(),
 				new Support.VanillaExpanded(),
+				new Support.AestheticMaterials(),
 
 				new Support.MiscForbid(),
 

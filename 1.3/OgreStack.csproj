@@ -52,6 +52,7 @@
     <Compile Include="Support\ExpandedWoodworking.cs" />
     <Compile Include="Support\GeneticRim.cs" />
     <Compile Include="Support\MedievalTimes.cs" />
+    <Compile Include="Support\RimCookieAestheticMaterials.cs" />
     <Compile Include="Support\RimCuisine2.cs" />
     <Compile Include="Support\RimWorld.cs" />
     <Compile Include="Support\RimWorldOfMagic.cs" />

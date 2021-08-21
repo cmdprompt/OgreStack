@@ -52,7 +52,8 @@ namespace OgreStack.Support
 			this.Define(Category.Leather, (d) => string.Compare(d.FirstThingCategory.ToString(), "Leathers", true) == 0);
 
 			// Textile
-			this.Define(Category.Textile, (d) => string.Compare(d.FirstThingCategory.ToString(), "Textiles", true) == 0);
+			//this.Define(Category.Textile, (d) => string.Compare(d.FirstThingCategory.ToString(), "Textiles", true) == 0);
+			this.Define(Category.Textile, (d) => Regex.IsMatch(d.FirstThingCategory.ToString(), @"^(Textiles|Wools)", RegexOptions.IgnoreCase));
 
 			// Stone Block
 			this.Define(Category.StoneBlock, (d) => string.Compare(d.FirstThingCategory.ToString(), "StoneBlocks", true) == 0);
