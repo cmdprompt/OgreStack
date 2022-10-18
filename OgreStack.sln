@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "_rimworld", "_rimworld\", "{2173D849-7B74-49D7-873B-06D4283FBFD8}"
 	ProjectSection(WebsiteProperties) = preProject
@@ -35,6 +35,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3", "1.3", "{D77859AF-40A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OgreStack", "1.3\OgreStack.csproj", "{8F50D707-7E5C-4927-848E-22F5CB6CDBC5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OgreStack", "1.4\OgreStack.csproj", "{6BF3E154-5B35-449C-B6B5-B95453B280D1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.4", "1.4", "{9766371C-A853-4546-93CE-7E9601613ABB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,9 +55,12 @@ Global
 		{5072359B-015A-46A4-B02C-E72851589312}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5072359B-015A-46A4-B02C-E72851589312}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8F50D707-7E5C-4927-848E-22F5CB6CDBC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8F50D707-7E5C-4927-848E-22F5CB6CDBC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F50D707-7E5C-4927-848E-22F5CB6CDBC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F50D707-7E5C-4927-848E-22F5CB6CDBC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BF3E154-5B35-449C-B6B5-B95453B280D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BF3E154-5B35-449C-B6B5-B95453B280D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BF3E154-5B35-449C-B6B5-B95453B280D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BF3E154-5B35-449C-B6B5-B95453B280D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,5 +69,9 @@ Global
 		{17FFC0C9-4A6D-41C3-B90C-076DC4E6927B} = {810BF847-B3C0-4F60-ADE5-CA0F9D2BEC04}
 		{5072359B-015A-46A4-B02C-E72851589312} = {100245FF-F45B-43BF-BBD3-6416BC5824CF}
 		{8F50D707-7E5C-4927-848E-22F5CB6CDBC5} = {D77859AF-40A4-47C5-9BCD-FD083887C394}
+		{6BF3E154-5B35-449C-B6B5-B95453B280D1} = {9766371C-A853-4546-93CE-7E9601613ABB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D8901EF-8024-4092-AE73-05629624B07B}
 	EndGlobalSection
 EndGlobal
