@@ -32,6 +32,10 @@ namespace OgreStack.Support
 				return true;
 
 
+			// Biotech DLC
+			if (string.Compare(thing.defName, "Genepack", true) == 0) { return false; }
+			if (string.Compare(thing.defName, "HumanEmbryo", true) == 0) { return false; }
+
 			return false;
 		}
 	}
