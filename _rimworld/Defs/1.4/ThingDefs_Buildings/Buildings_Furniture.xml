@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="BuildingBase">
+		<minifiedDef />
+		<defName>OgreStack_ChunkSpot</defName>
+		<label>chunk stacking spot</label>
+		<description>Designates a spot to stack chunks</description>
+		<thingClass>OgreStack.Models.StonePile</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Misc/AnimalBed/AnimalSleepSpot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<uiIconScale>0.80</uiIconScale>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.4</fillPercent>
+		<castEdgeShadows>true</castEdgeShadows>
+		<pathCost>50</pathCost>
+		<size>(1,1)</size>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<useHitPoints>False</useHitPoints>
+		<designationCategory>Furniture</designationCategory>
+		<uiOrder>2000</uiOrder>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<rotatable>false</rotatable>
+		<building>
+			<canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+			<ai_chillDestination>false</ai_chillDestination>
+			<wakeDormantPawnsOnConstruction>false</wakeDormantPawnsOnConstruction>
+			<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+			<preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+			<ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+			<maxItemsInCell>20</maxItemsInCell>
+			<!--<storageGroupTag>Shelf</storageGroupTag>-->
+			<!--<blueprintClass>Blueprint_Storage</blueprintClass>-->
+			<fixedStorageSettings>
+				<filter>
+					<disallowNotEverStorable>false</disallowNotEverStorable>
+					<categories>
+						<li>Chunks</li>
+					</categories>
+				</filter>
+			</fixedStorageSettings>
+			<defaultStorageSettings>
+				<priority>Preferred</priority>
+				<filter>
+					<categories>
+						<li>Chunks</li>
+					</categories>
+				</filter>
+			</defaultStorageSettings>
+			
+		</building>
+		<inspectorTabs>
+			<li>ITab_Storage</li>
+		</inspectorTabs>
+		<statBases>
+			<WorkToBuild>0</WorkToBuild>
+		</statBases>
+		<surfaceType>Item</surfaceType>
+		<canOverlapZones>false</canOverlapZones>
+	</ThingDef>
+	
+</Defs>
