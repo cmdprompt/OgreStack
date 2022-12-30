@@ -46,7 +46,9 @@
     <Compile Include="PersistentData\DataUtil.cs" />
     <Compile Include="ProcessAbstract.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Support\AlphaGenes.cs" />
     <Compile Include="Support\Ammunition.cs" />
+    <Compile Include="Support\MedievalOverhaul.cs" />
     <Compile Include="Support\MiscForbid.cs" />
     <Compile Include="Support\CuprosDrinks.cs" />
     <Compile Include="Support\ExpandedWoodworking.cs" />

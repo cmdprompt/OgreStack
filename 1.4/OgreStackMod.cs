@@ -476,6 +476,9 @@ namespace OgreStack
 				new Support.VanillaExpanded(),
 				new Support.AestheticMaterials(),
 
+				new Support.AlphaGenes(),
+				new Support.MedievalOverhaul(),
+
 				new Support.MiscForbid(),
 
 				// Base Game Defs
