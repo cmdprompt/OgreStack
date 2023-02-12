@@ -17,7 +17,7 @@ namespace OgreStack.Support
 			if (string.Compare(thing.FirstThingCategory.ToString(), "AG_GeneTools", true) == 0)
 				return true;
 
-			if (Regex.IsMatch(thing.defName, @"^AG_(Alphapack|MixedPack|HumanEgg)$"))
+			if (Regex.IsMatch(thing.defName, @"^AG_(Alphapack|Mixedpack|HumanEgg)$"))
 				return true;
 
 			return false;
