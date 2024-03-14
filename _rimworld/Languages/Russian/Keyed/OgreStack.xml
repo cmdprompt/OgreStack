@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <OgreStack.ModName>OgreStack</OgreStack.ModName>
+
+  <!-- Mode Options -->
+  <OgreStack.Settings.Mode.Scalar>Скалированное</OgreStack.Settings.Mode.Scalar>
+  <OgreStack.Settings.Mode.Fixed>Фиксированное</OgreStack.Settings.Mode.Fixed>
+
+
+  <!-- Stack Settings -->
+  <OgreStack.SectionHeader.Settings>Настройки стаков</OgreStack.SectionHeader.Settings>
+  <OgreStack.SectionHeader.Presets>Пресеты</OgreStack.SectionHeader.Presets>
+
+  <!-- Preset Sections -->
+  <OgreStack.Presets.Section.Ogre>Режимы Огров</OgreStack.Presets.Section.Ogre>
+  <OgreStack.Presets.Section.Scalar>Скалирование</OgreStack.Presets.Section.Scalar>
+
+  <!-- Presets -->
+  <OgreStack.Presets.OgreDefault>По умолчанию</OgreStack.Presets.OgreDefault>
+  <OgreStack.Presets.OgreMid>Среднее</OgreStack.Presets.OgreMid>
+  <OgreStack.Presets.OgreLow>Низкое</OgreStack.Presets.OgreLow>
+
+  <OgreStack.Presets.Scalar.1x>Ванильное</OgreStack.Presets.Scalar.1x>
+  <OgreStack.Presets.Scalar.2x>Двойное</OgreStack.Presets.Scalar.2x>
+  <OgreStack.Presets.Scalar.3x>Тройное</OgreStack.Presets.Scalar.3x>
+  <OgreStack.Presets.Scalar.4x>4x</OgreStack.Presets.Scalar.4x>
+  <OgreStack.Presets.Scalar.5x>5x</OgreStack.Presets.Scalar.5x>
+  <OgreStack.Presets.Scalar.6x>6x</OgreStack.Presets.Scalar.6x>
+  <OgreStack.Presets.Scalar.7x>7x</OgreStack.Presets.Scalar.7x>
+  <OgreStack.Presets.Scalar.8x>8x</OgreStack.Presets.Scalar.8x>
+  <OgreStack.Presets.Scalar.9x>9x</OgreStack.Presets.Scalar.9x>
+  <OgreStack.Presets.Scalar.10x>10x</OgreStack.Presets.Scalar.10x>
+
+  <!-- Stack Settings: Table Headers -->
+  <OgreStack.Settings.Category>Категории</OgreStack.Settings.Category>
+  <OgreStack.Settings.Mode>Режим</OgreStack.Settings.Mode>
+  <OgreStack.Settings.Mode.Desc>Фиксированное: Значит, что каждый элемент, соответствующий категории, будет иметь размер стака, указанный в значении.\n(Хорошо подходит для предметов, которые похожи и имеют одинаковые базовые размеры стака: например, ткань и кожа).\n\nСкалированное: Значит, что каждый предмет, соответствующий категории, будет иметь свой базовый размер игрового стака, умноженный на значение.\n(Хорошо подходит для предметов, которые не похожи друг на друга или сильно отличаются по размеру базового стака).</OgreStack.Settings.Mode.Desc>
+  <OgreStack.Settings.Value>Значение</OgreStack.Settings.Value>
+
+  <!-- Stack Settings: Category Titles / ToolTip Descriptions -->
+  <OgreStack.Settings.SmallVolumeResource.Title>Ресурсы малого объёма</OgreStack.Settings.SmallVolumeResource.Title>
+  <OgreStack.Settings.SmallVolumeResource.Desc>Золото, Уран ...</OgreStack.Settings.SmallVolumeResource.Desc>
+
+  <OgreStack.Settings.Resource.Title>Ресурсы</OgreStack.Settings.Resource.Title>
+  <OgreStack.Settings.Resource.Desc>Сталь, пласталь, дерево, нефрит ...</OgreStack.Settings.Resource.Desc>
+
+  <OgreStack.Settings.RawFoodMeat.Title>Сырое мясо</OgreStack.Settings.RawFoodMeat.Title>
+  <OgreStack.Settings.RawFoodMeat.Desc>Мясо, молоко, яйца ...</OgreStack.Settings.RawFoodMeat.Desc>
+
+  <OgreStack.Settings.RawFoodPlant.Title>Сырые овощи</OgreStack.Settings.RawFoodPlant.Title>
+  <OgreStack.Settings.RawFoodPlant.Desc>Кукуруза, ягоды, рис ...</OgreStack.Settings.RawFoodPlant.Desc>
+
+  <OgreStack.Settings.PlantMatter.Title>Сырые растения</OgreStack.Settings.PlantMatter.Title>
+  <OgreStack.Settings.PlantMatter.Desc>Хмель, листья психолиста, листья дымолиста ...</OgreStack.Settings.PlantMatter.Desc>
+
+  <OgreStack.Settings.Meal.Title>Блюда</OgreStack.Settings.Meal.Title>
+  <OgreStack.Settings.Meal.Desc>Простое блюдо, Хорошее блюдо ...</OgreStack.Settings.Meal.Desc>
+
+  <OgreStack.Settings.FoodForAnimal.Title>Корм для животных</OgreStack.Settings.FoodForAnimal.Title>
+  <OgreStack.Settings.FoodForAnimal.Desc>Сено, комбикорм ...</OgreStack.Settings.FoodForAnimal.Desc>
+
+  <OgreStack.Settings.Food.Title>Еда</OgreStack.Settings.Food.Title>
+  <OgreStack.Settings.Food.Desc>Пеммикан, шоколад ...</OgreStack.Settings.Food.Desc>
+
+  <OgreStack.Settings.Item.Title>Предметы</OgreStack.Settings.Item.Title>
+  <OgreStack.Settings.Item.Desc>Рога, механические сыворотки ...</OgreStack.Settings.Item.Desc>
+
+  <OgreStack.Settings.BodyPartOrImplant.Title>Части тела и Имплантаты</OgreStack.Settings.BodyPartOrImplant.Title>
+  <OgreStack.Settings.BodyPartOrImplant.Desc>Органы, руки, бионика, имплантаты ...</OgreStack.Settings.BodyPartOrImplant.Desc>
+
+  <OgreStack.Settings.Leather.Title>Кожа</OgreStack.Settings.Leather.Title>
+  <OgreStack.Settings.Leather.Desc>Кожа ...</OgreStack.Settings.Leather.Desc>
+
+  <OgreStack.Settings.Textile.Title>Текстиль</OgreStack.Settings.Textile.Title>
+  <OgreStack.Settings.Textile.Desc>Ткань, Шерсть ...</OgreStack.Settings.Textile.Desc>
+
+  <OgreStack.Settings.StoneBlock.Title>Каменные блоки</OgreStack.Settings.StoneBlock.Title>
+  <OgreStack.Settings.StoneBlock.Desc>Гранит, мрамор ...</OgreStack.Settings.StoneBlock.Desc>
+
+  <OgreStack.Settings.Manufactured.Title>Промышленное</OgreStack.Settings.Manufactured.Title>
+  <OgreStack.Settings.Manufactured.Desc>Сусло, компоненты, нейтроамин, химическое топливо ...</OgreStack.Settings.Manufactured.Desc>
+
+  <OgreStack.Settings.Drug.Title>Наркотики</OgreStack.Settings.Drug.Title>
+  <OgreStack.Settings.Drug.Desc>Пиво, амброзия, порошок психинa ...</OgreStack.Settings.Drug.Desc>
+
+  <OgreStack.Settings.Medicine.Title>Медицина</OgreStack.Settings.Medicine.Title>
+  <OgreStack.Settings.Medicine.Desc>Медикаменты, травы ...</OgreStack.Settings.Medicine.Desc>
+
+  <OgreStack.Settings.MortarShell.Title>Миномётные снаряды</OgreStack.Settings.MortarShell.Title>
+  <OgreStack.Settings.MortarShell.Desc>Взрывные, снаряды, ЭМИ ...</OgreStack.Settings.MortarShell.Desc>
+
+  <OgreStack.Settings.Artifact.Title>Артефакты</OgreStack.Settings.Artifact.Title>
+  <OgreStack.Settings.Artifact.Desc>Пси-излучатель, генератор пси-импульса (животные) ...</OgreStack.Settings.Artifact.Desc>
+
+  <OgreStack.Settings.Other.Title>Другое</OgreStack.Settings.Other.Title>
+  <OgreStack.Settings.Other.Desc>Всё остальное, что стакабельно</OgreStack.Settings.Other.Desc>
+
+
+  <!-- Advanced: Manual Overrides -->
+  <OgreStack.SectionHeader.SingleThingDefTargeting><![CDATA[<color=#ffa500ff>(Продвинутые)</color> Нацеливание на отдельные предметы]]></OgreStack.SectionHeader.SingleThingDefTargeting>
+  <OgreStack.Settings.DefName>defName</OgreStack.Settings.DefName>
+  <OgreStack.Settings.StackLimit>Лимит стака</OgreStack.Settings.StackLimit>
+  <OgreStack.Settings.SingleThingDefTargeting.Desc><![CDATA[Этот раздел предназначен только для тех, кому удобно редактировать XML-файл за пределами RimWorld, и кто хочет установить <color=#ffa500ff>Индивидуальные лимиты стаков ThingDef</color>, которые отменяют общие лимиты, настроенные выше. Файл Overrides.xml находится здесь: <color=#ffa500ff><size=13>{0}</size></color>]]></OgreStack.Settings.SingleThingDefTargeting.Desc>
+
+  <!-- Debug -->
+  <OgreStack.SectionHeader.Debug>Отладка</OgreStack.SectionHeader.Debug>
+  <OgreStack.Settings.CSV.Title>Записать обработанный DefsList в CSV</OgreStack.Settings.CSV.Title>
+  <OgreStack.Settings.CSV.Desc>Записывает все ThingDef'ы, которые можно складывать в стак, их исходные значения стака, какие ModFile их изменили, конечные значения стака, т.е. отладочную информацию.\n\nОбратите внимание, что это происходит только при изменении стаков. Не только от установки флажка.\n\nВыходной файл называется OgreStack_DefsList.csv и будет расположен в папке RimWorld savedata в папке OgreStack.\n\nПуть: {0}</OgreStack.Settings.CSV.Desc>
+
+
+
+
+</LanguageData>
